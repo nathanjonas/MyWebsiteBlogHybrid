@@ -1,0 +1,13 @@
+.ContactComponent {
+    background-color: #444054;
+    margin: 2%;
+    text-align: center;
+    height: 480px;
+    border-radius: 20px;
+    color: #f4f7c5;
+}
+
+.ContactHeader {
+    font-weight: bold;
+    font-size: xx-large;
+}

@@ -1,18 +1,60 @@
-.App {
-  text-align: center;
+.SocialMediaBar {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 10px 0px 0px;
+}
+
+.SocialMediaElement {
+  padding: 10px;
+  font-weight: 200;
+  border: solid;
+  border-radius: 22px;
+  border-width: thin;
+  border-color: #3b6978;
+}
+
+.SocialMediaElement:hover {
+  background-color: #f0f8ff;
+  font-weight: bold;
 }
 
 .HeaderBar {
-  padding: 16px;
-  display: inline-flex;
-  width: 100%;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
 }
 
-ul.HeaderNav {
-  list-style-type: none;
-  margin: 0;
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.HeaderName {
+  padding-top: 10%;
+  font-size: -webkit-xxx-large;
+}
+
+.MinimizedHeaderName {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.NavBar {
+  padding: 7px;
+  display: inline-flex;
+}
+
+.MinimizedNavBar {
+  display: inline-flex;
+  font-size: 15px;
+}
+
+.NavLink {
+  text-decoration: none;
+  color: #3b6978;
+  padding: 3px;
+}
+
+.HeaderUl {
   padding: 0;
-  overflow: hidden;
 }
 
 li.HeaderNavItem {
@@ -21,15 +63,22 @@ li.HeaderNavItem {
   padding: 16px;
 }
 
-.NavLink {
-  text-decoration: none;
-  color: #3b6978;
-}
-
 .active {
-  background-color: #0099FF;
+  font-weight: 600;
 }
 
-body{
-  background-color: #f4f7c5;
+.BodyComponent {
+  background-color: #3b6978;
+  margin: 1%;
+  height: 480px;
+  border-radius: 20px;
+  color: white;
+}
+
+.BodyHeader {
+  font-weight: bold;
+  font-size: x-large;
+  padding: 2%;
+  border-bottom-style: double;
+  border-bottom-color: white;
 }

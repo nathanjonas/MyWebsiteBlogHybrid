@@ -3,7 +3,7 @@ import "./App.css";
 // import AllPlayers from './Players/playerComponent'
 import Contact from "./Contact/Contact";
 import AboutMe from "./About-Me/AboutMe";
-import Destinations from "./Destinations/Destinations";
+import Projects from "./Projects/Projects";
 import Home from "./Home/Home";
 import { Route, NavLink, HashRouter } from "react-router-dom";
 import NavListItem from "./layout/NavListItem";
@@ -12,10 +12,10 @@ import SocialMediaHeader from "./layout/SocialMediaHeader";
 function App() {
   const homeRoute = "/";
   const aboutMeRoute = "/aboutme";
-  const destinationsRoute = "/destinations";
+  const projectsRoute = "/projects";
   const contactRoute = "/contact";
 
-  const [isHomepage, setIsHomepage] = useState(true);
+  const [isHomepage, setIsHomepage] = useState(false);
 
   return (
     <HashRouter>
@@ -23,8 +23,15 @@ function App() {
 
       <div className="HeaderBar">
         <div className={isHomepage ? "HeaderName" : "MinimizedHeaderName"}>
-          <NavLink className="NavLink" exact to={homeRoute} onClick={() => setIsHomepage(true)}>
-            Nathan's Travel Blog
+          <NavLink
+            className="NavLink"
+            exact
+            to={homeRoute}
+            onClick={() => setIsHomepage(true)}
+          >
+            <span className="HeaderBarDescriber">Designer | </span>
+            Nathan Jonas
+            <span className="HeaderBarDescriber">| Developer</span>
           </NavLink>
         </div>
 
@@ -32,12 +39,12 @@ function App() {
           <ul className="HeaderUl">
             <NavListItem
               route={aboutMeRoute}
-              linkText="About Me"
+              linkText="Who am I?"
               clickHandler={() => setIsHomepage(false)}
             />
             <NavListItem
-              route={destinationsRoute}
-              linkText="Destinations"
+              route={projectsRoute}
+              linkText="Projects"
               clickHandler={() => setIsHomepage(false)}
             />
             <NavListItem
@@ -47,17 +54,18 @@ function App() {
             />
           </ul>
         </div>
-
       </div>
 
-      <body>
-        <div className="content">
-          <Route exact path={homeRoute} component={Home} />
-          <Route path={aboutMeRoute} component={AboutMe} />
-          <Route path={destinationsRoute} component={Destinations} />
-          <Route path={contactRoute} component={Contact} />
-        </div>
-      </body>
+      <div className="content">
+        <Route exact path={homeRoute} component={Home} />
+        <Route path={aboutMeRoute} component={AboutMe} />
+        <Route path={projectsRoute} component={Projects} />
+        <Route path={contactRoute} component={Contact} />
+      </div>
+
+      <script src="/__/firebase/7.15.4/firebase-app.js"></script>
+      <script src="/__/firebase/7.15.4/firebase-analytics.js"></script>
+      <script src="/__/firebase/init.js"></script>
     </HashRouter>
   );
 }

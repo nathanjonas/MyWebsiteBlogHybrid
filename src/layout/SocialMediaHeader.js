@@ -10,12 +10,12 @@ const SocialMediaHeader = () => {
         </a>
       </div>
       <div className="SocialMediaElement">
-        <a href="https://www.google.com" className="NavLink">
+        <a href="https://github.com/nathanjonas" className="NavLink">
           Github
         </a>
       </div>
       <div className="SocialMediaElement">
-        <a href="https://www.google.com" className="NavLink">
+        <a href="https://www.linkedin.com/in/nathan-jonas-045839146/" className="NavLink">
           LinkedIn
         </a>
       </div>

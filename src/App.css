@@ -7,20 +7,25 @@
 .SocialMediaElement {
   padding: 10px;
   font-weight: 200;
-  border: solid;
+  border-right: solid;
+  border-bottom: solid;
   border-radius: 22px;
   border-width: thin;
   border-color: #3b6978;
 }
 
 .SocialMediaElement:hover {
-  background-color: #f0f8ff;
+  background-color: #ffd300;
   font-weight: bold;
 }
 
 .HeaderBar {
   text-align: center;
   font-family: "Courier New", Courier, monospace;
+}
+
+.HeaderBarDescriber {
+  color: #ffd300;
 }
 
 body {

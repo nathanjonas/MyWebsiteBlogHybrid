@@ -1,0 +1,45 @@
+.aboutMeHeader {
+    color: #170f7c;
+    font-size: x-large;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: double;
+    width: 50%;
+    margin: 0 auto;
+    padding: 10px;
+    border-color: #f767cb;
+}
+
+.aboutMeBody {
+  margin: auto;
+  width: 70%;
+  margin-top: 20px;
+  color: #170f7c;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.aboutMeBody:hover {
+  /* background-color: #b2ebf3; */
+  background-color: white;
+  box-shadow: 0px 20px 100px #555;
+}
+
+.leftColumn {
+  width: 50%;
+  text-align: right;
+  line-height: 100px;
+}
+
+.leftColumnText {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  padding-right: 20px;
+}
+
+.rightColumn {
+  width: 50%;
+  text-align: left;
+  margin: 0px 80px 0px 30px;
+}

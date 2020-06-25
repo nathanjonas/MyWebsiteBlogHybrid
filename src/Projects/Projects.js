@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import DestinationList from "./DestinationList";
+import ProjectList from "./ProjectList";
 
-export default class Destinations extends Component {
+export default class Projects extends Component {
   render() {
     return (
       <div className="BodyComponent">
         <div className="BodyHeader">Destinations</div>
-        {DestinationList.map((destination) => [
+        {ProjectList.map((destination) => [
           <div>{destination.CountryName}</div>
         ])}
       </div>

@@ -1,28 +1,55 @@
-.aboutMeHeader {
-    color: #170f7c;
-    font-size: x-large;
-    text-align: center;
-    font-weight: bold;
-    border-bottom: double;
-    width: 50%;
-    margin: 0 auto;
-    padding: 10px;
-    border-color: #f767cb;
-}
-
 .aboutMeBody {
   margin: auto;
   width: 70%;
   margin-top: 20px;
-  color: #170f7c;
+  background-color: #3b6978;
+  color: white;
+  font-weight: bolder;
+  box-shadow: 0px 0px 30px 10px #ffd300;
+  font-size: 1.1em;
   padding: 15px;
   border-radius: 20px;
 }
 
-.aboutMeBody:hover {
-  /* background-color: #b2ebf3; */
-  background-color: white;
-  box-shadow: 0px 20px 100px #555;
+.aboutMeHeader {
+  margin: 80px;
+  text-align: center;
+}
+
+.skillContainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill {
+  background-color: #3b6978;
+  color: white;
+  font-weight: bolder;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.searchBar {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.searchBarModule[type=text] {
+  border-radius: 10px;
+  padding: 5px;
+  width: 15%;
+  font-size: 1.1rem;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+.searchBarModule[type=text]:focus {
+  width: 60%;
 }
 
 .leftColumn {

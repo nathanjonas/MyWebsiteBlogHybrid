@@ -59,7 +59,7 @@ export default class AboutMe extends Component {
         <div className="searchBar">
           <input className="searchBarModule" type="text" value={filter} onChange={this.handleChange} placeholder="Search..."/>
         </div>
-        <div class="skillContainer">
+        <div className="skillContainer">
           {filteredSkills.map((skill) => {
             return <div class="skill">{skill}</div>;
           })}

@@ -8,13 +8,15 @@ import Home from "./Home/Home";
 import { Route, NavLink, HashRouter } from "react-router-dom";
 import NavListItem from "./layout/NavListItem";
 import SocialMediaHeader from "./layout/SocialMediaHeader";
+import CssProject from "./Projects/ColorTheFace/CssProject";
+
+const homeRoute = "/";
+const aboutMeRoute = "/aboutme";
+const projectsRoute = "/projects";
+const contactRoute = "/contact";
+const cssRoute = "/testProject";
 
 function App() {
-  const homeRoute = "/";
-  const aboutMeRoute = "/aboutme";
-  const projectsRoute = "/projects";
-  const contactRoute = "/contact";
-
   const [isHomepage, setIsHomepage] = useState(false);
 
   return (
@@ -61,11 +63,8 @@ function App() {
         <Route path={aboutMeRoute} component={AboutMe} />
         <Route path={projectsRoute} component={Projects} />
         <Route path={contactRoute} component={Contact} />
+        <Route path={cssRoute} component={CssProject} />
       </div>
-
-      <script src="/__/firebase/7.15.4/firebase-app.js"></script>
-      <script src="/__/firebase/7.15.4/firebase-analytics.js"></script>
-      <script src="/__/firebase/init.js"></script>
     </HashRouter>
   );
 }

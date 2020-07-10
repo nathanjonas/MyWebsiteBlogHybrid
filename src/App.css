@@ -1,3 +1,8 @@
+body {
+  background-color: black;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .SocialMediaBar {
   display: flex;
   justify-content: flex-end;
@@ -6,30 +11,14 @@
 
 .SocialMediaElement {
   padding: 10px;
-  font-weight: 200;
-  border-right: solid;
-  border-bottom: solid;
-  border-radius: 22px;
-  border-width: thin;
-  border-color: #3b6978;
-}
-
-.SocialMediaElement:hover {
-  background-color: #ffd300;
-  font-weight: bold;
 }
 
 .HeaderBar {
   text-align: center;
-  font-family: "Courier New", Courier, monospace;
 }
 
 .HeaderBarDescriber {
-  color: #ffd300;
-}
-
-body {
-  font-family: "Courier New", Courier, monospace;
+  color: #3CB9FC;
 }
 
 .HeaderName {
@@ -45,6 +34,7 @@ body {
 .NavBar {
   padding: 7px;
   display: inline-flex;
+  font-size: larger;
 }
 
 .MinimizedNavBar {
@@ -54,8 +44,12 @@ body {
 
 .NavLink {
   text-decoration: none;
-  color: #3b6978;
+  color: white;
   padding: 3px;
+}
+
+.NavLink:hover {
+  font-weight: 900;
 }
 
 .HeaderUl {

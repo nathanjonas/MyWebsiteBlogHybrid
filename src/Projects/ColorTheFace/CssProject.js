@@ -1,15 +1,18 @@
 import React, { Component } from "react";
-import axios from "axios";
+import { connect } from "react-redux";
 import "./CssProject.css";
 
-export default class CssProject extends Component {
+const mapStateToProps = ({ colors }) => ({
+  colors,
+});
+
+class CssProject extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      colorArray: [],
-      eyeColor: "",
-      mouthColor: "",
-      faceColor: "",
+      eyeColor: "blue",
+      mouthColor: "red",
+      faceColor: "yellow",
       currentFeature: "eyes",
     };
   }
@@ -27,7 +30,6 @@ export default class CssProject extends Component {
         });
         break;
       default:
-        // (face)
         this.setState({
           faceColor: color,
         });
@@ -35,30 +37,9 @@ export default class CssProject extends Component {
     }
   };
 
-  componentWillMount() {
-    axios
-      .get("https://api.color.pizza/v1/?goodnamesonly=true")
-      .then((response) => {
-        let test = response.data.colors.map((color) => {
-          return color.hex;
-        });
-
-        this.setState({
-          colorArray: Object.values(test).slice(1, 250),
-          eyeColor: "white",
-          mouthColor: "red",
-          faceColor: "#ffb908",
-        });
-        console.log(this.state.colorArray);
-      });
-  }
-
   render() {
     return (
       <div>
-        <span style={{ color: "white" }}>
-          Color: {this.state.currentFeature}
-        </span>
         <div className="buttonContainer">
           <button
             className="buttonOption"
@@ -79,14 +60,18 @@ export default class CssProject extends Component {
             Face
           </button>
         </div>
+        <div className="chooseColorLine">
+          Please choose a color for Mr.Smiley's{" "}
+          <b>{this.state.currentFeature}</b>
+        </div>
         <div className="colorContainer">
-          {this.state.colorArray.map((color) => {
+          {this.props.colors.slice(0, 600).map((color) => {
             return (
               <div
                 className="colorDiv"
-                style={{ backgroundColor: color }}
+                style={{ backgroundColor: color.hex }}
                 onClick={() =>
-                  this.changeColor(color, this.state.currentFeature)
+                  this.changeColor(color.hex, this.state.currentFeature)
                 }
               ></div>
             );
@@ -110,3 +95,5 @@ export default class CssProject extends Component {
     );
   }
 }
+
+export default connect(mapStateToProps)(CssProject);

@@ -1,18 +1,18 @@
 export default {
   projects: [
     {
-      Name: "Rest API -> Inline Style",
+      Name: "Color The Face!",
       ProjectDescription:
-        "I found a small API consisting of colors, I was then able to use this feed to populate the page full of colors.",
+        "I found a small API consisting of colors, now we can color things.",
       Route: "/testProject",
       Component: "Test",
       GithubLink: "Thisisalink.com",
-      PrimaryColor: "black",
+      PrimaryColor: "red",
       SecondaryColor: "white",
     },
     {
-      Name: "Test2",
-      ProjectDescription: "This is a project",
+      Name: "Connect4",
+      ProjectDescription: "Want to play Connect 4?",
       Route: "Iamalink.com",
       GithubLink: "Thisisalink.com",
       PrimaryColor: "green",

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, NavLink } from "react-router-dom";
 import CssProject from "./ColorTheFace/CssProject";
-import config from "./projectList";
+import config from "./ProjectList";
 
 const projects = Object.values(config.projects);
 

@@ -25,7 +25,7 @@ export default class Contact extends Component {
     };
 
     axios
-      .post("API_URI", data)
+      .post("https://contact-me-service-git-zeit-branch.nathanjonas.vercel.app/", data)
       .then((res) => {
         this.setState({ sent: true }, this.resetForm());
       })

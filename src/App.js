@@ -16,7 +16,7 @@ const contactRoute = "/contact";
 const cssRoute = "/testProject";
 
 function App() {
-  const [isHomepage, setIsHomepage] = useState(false);
+  const [isHomepage, setIsHomepage] = useState(true);
 
   return (
       <HashRouter>

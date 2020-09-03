@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import config from "./workexperience";
 
 var techlist = [
   "jQuery",
@@ -12,9 +13,10 @@ var techlist = [
   "HTML",
   "JavaScript",
   "CSS",
-  "ASP.NET",
+  ".NET",
   "Vue",
   "React",
+  "Preact",
   "Django",
   "Windows",
   "MacOS",
@@ -24,6 +26,7 @@ var techlist = [
   "GitLab",
   "VS Code",
   "Node",
+  "Jest",
 ];
 
 export default class AboutMe extends Component {
@@ -45,23 +48,46 @@ export default class AboutMe extends Component {
 
     return (
       <div className="aboutMe">
+        <BodyHeader labelName="About Me" />
         <div className="aboutMeBody">
-          Hello world. I am a computer science student at the <span style={{color:"#7f0000"}}>University of
-          Cincinnati (UC)</span>, and I hope you enjoy this React project. Throughout
-          my time at UC, I have been exposed to the digital world in the form of
-          classroom and professional experience. I love it. I hope to continue
-          my work upon graduation (04/2021) and begin my career as a software
-          developer and designer.
+          Hello world. I am a computer science student at the{" "}
+          <span style={{ color: "#7f0000" }}>
+            University of Cincinnati (UC)
+          </span>
+          , and I hope you enjoy this React project. Throughout my time at UC, I
+          have been exposed to the digital world in the form of classroom and
+          professional experience. I love it. I hope to continue my work upon
+          graduation (04/2021) and begin my career as a software developer and
+          designer.
         </div>
-        <div className="workMethodsContainer">
-          <ul className="workMethodsList">
-            <li className="workMethodsOption">Front End</li>
-            <li className="workMethodsOption">Back End</li>
-            <li className="workMethodsOption">Data Processing</li>
-          </ul>
+        <BodyHeader labelName="Work Experience" />
+        <div className="workContainer">
+          {config.map((company) => {
+            return (
+              <div
+                className="WEContainer"
+                style={{ backgroundColor: company.PrimaryColor }}
+              >
+                <div class="WEName">
+                  {company.Name}
+                  <span className="WELocation">{company.Location}</span>
+                </div>
+                {company.Projects.map((project) => (
+                  <div className="WEProject">{project}</div>
+                ))}
+              </div>
+            );
+          })}
         </div>
+        <BodyHeader labelName="My Skills" />
         <div className="searchBar">
-          <input className="searchBarModule" type="text" value={filter} onChange={this.handleChange} placeholder="Search Skills"/>
+          <input
+            className="searchBarModule"
+            type="text"
+            value={filter}
+            onChange={this.handleChange}
+            placeholder="Search Skills"
+          />
         </div>
         <div className="skillContainer">
           {filteredSkills.map((skill) => {
@@ -72,3 +98,12 @@ export default class AboutMe extends Component {
     );
   }
 }
+
+const BodyHeader = (props) => {
+  return (
+    <div className="bodyHeaderContainer">
+      <b className="headerSpan">{props.labelName}</b>
+      <hr />
+    </div>
+  );
+};

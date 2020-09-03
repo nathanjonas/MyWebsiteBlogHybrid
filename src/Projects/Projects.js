@@ -9,12 +9,14 @@ export default class Projects extends Component {
   render() {
     return (
       <div>
-        <div className="ProjectContainer">
-          <div className="ProjectContainerHeader">My Projects</div>
+        <div className="ProjectsContainer">
+          <span className="warning">
+            I've only had time to upload this one so far!
+          </span>
           {projects.map((project) => {
             return (
               <div
-                className="ProjectObject"
+                className="ProjectContainer"
                 style={{ backgroundColor: project.PrimaryColor }}
               >
                 <div className="ProjectHeader">{project.Name}</div>
@@ -28,12 +30,7 @@ export default class Projects extends Component {
                 >
                   Click Here!
                 </NavLink>
-                <Route
-                  path={project.Route}
-                  component={() => (
-                    <CssProject />
-                  )}
-                />
+                <Route path={project.Route} component={() => <CssProject />} />
                 <div className="ViewGithubLink">
                   <a className="GithubLink" href={project.GithubLink}>
                     Check this out on Github

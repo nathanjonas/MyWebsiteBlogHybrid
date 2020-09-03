@@ -1,4 +1,4 @@
-.ProjectContainer {
+.ProjectsContainer {
   margin: 0;
   width: 100%;
   display: flex;
@@ -7,33 +7,7 @@
   text-align: center;
 }
 
-.ProjectContainerHeader {
-  width: 100%;
-  margin: 15px;
-  position: relative;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  letter-spacing: 4px;
-  overflow: hidden;
-  background: linear-gradient(90deg, #000, #fff, #000);
-  background-repeat: no-repeat;
-  background-size: 80%;
-  animation: animate 5s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0);
-}
-
-@keyframes animate {
-  0% {
-    background-position: -300%;
-  }
-  100% {
-    background-position: 300%;
-  }
-}
-
-.ProjectObject {
+.ProjectContainer {
   width: 300px;
   height: 250px;
   border: solid;
@@ -43,6 +17,12 @@
 .ProjectHeader {
   font-weight: 600;
   padding: 13px;
+}
+
+.warning {
+  color: yellow;
+  width: 100%;
+  margin: 10px;
 }
 
 .ProjectDescription {

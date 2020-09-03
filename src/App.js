@@ -13,10 +13,10 @@ const homeRoute = "/";
 const aboutMeRoute = "/aboutme";
 const projectsRoute = "/projects";
 const contactRoute = "/contact";
-const cssRoute = "/testProject";
+const cssRoute = "/color-the-face";
 
 function App() {
-  const [isHomepage, setIsHomepage] = useState(true);
+  const [isHomepage, setIsHomepage] = useState(false);
 
   return (
       <HashRouter>

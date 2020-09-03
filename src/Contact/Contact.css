@@ -1,47 +1,46 @@
-.contact-form {
-  padding: 100px;
-}
-
-.formComponent {
-  display: flex;
-  justify-content: center;
-  line-height: 35px;
-  padding: 20px;
-  font-size: larger;
-}
-
-.labelText {
+.container {
+  margin: auto;
   color: white;
-  margin-right: 20px;
-  width: 140px;
-  text-align: right;
 }
 
-.inputContainer {
-  text-align: left;
-  width: 200px;
-  background-color: black;
-  border-color: white;
+.formContainer {
+  margin: auto;
+  width: 420px;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.submitButton {
+  background-color: #4caf50;
   color: white;
-  border-radius: 5px;
-}
-
-.inputContainer::placeholder {
-  color: #3cb9fc;
-}
-
-.messageContainer {
-  width: 300px !important;
-}
-
-.formButton {
-  text-align: center;
-}
-
-.button {
-  padding: 8px;
-  border-radius: 6px;
+  padding: 12px 20px;
   border: none;
-  background-color: #3cb9fc;
   cursor: pointer;
+  border-radius: 8px;
+}
+
+.submitButton:hover {
+  background-color: white;
+  color: #4caf50;
+}
+
+.column {
+  width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .column,
+  .submitButton {
+    width: 100%;
+    margin-top: 0;
+  }
 }
